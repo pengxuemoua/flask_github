@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+ <h1>GitHub Info For User: {{ github_info.login }}</h1>
+
+<p>User's name: {{ github_info.name }} </p>
+
+<p>Public Repository Count: {{ github_info.repos }}</p>
+
+<p><a href="{{ github_info.home_page }}">View user's repositories at GitHub</a></p>
+
+<p>
+<img src="{{ github_info.avatar_url }}">
+</p>
+
+<p>Do you want to try again? 
+<a href="/">Go back to home page</a>
+</p>
+
+<p>
+<a href="https://github.com">Visit GitHub's website</a>
+</p>
+
+{% endblock %}
